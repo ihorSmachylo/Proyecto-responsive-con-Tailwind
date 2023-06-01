@@ -1,21 +1,288 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <!-- si no te funcionan el npm install y el npm start, descomenta la siguiente línea: -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <title>Proyecto 1</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline text-emerald-700">Hello world!</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="/dist/output.css" rel="stylesheet" />
+  <!-- si no te funcionan el npm install y el npm start, descomenta la siguiente línea: -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- CDN IONICONS -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>Proyecto 1</title>
+  <!-- font google  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white">
+  <header>
+    <nav class="p-5 bg-black shadow md:flex md:items-center md:justify-between relative">
+      <div class="flex justify-between items-center ">
+        <span class="text-2xl cursor-pointer">
+          <img class="h-10 inline" src="../src/img/camara.png">
+          Logo
+        </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">Home</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">About</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">Reviews</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-500">Contact</a>
+        </li>
+
+
+        <button class="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+          Get started
+        </button>
+        <h2 class=""></h2>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="md:container md:mx-auto px-1 mt-80 md:mt-20 ">
+    <div class="flex justify-center ">
+      <div>
+        <h3>Creative Brand & identity Design Agency, We Are Imagine Stunning Visual Designs.</h3>
+      </div>
+
+    </div>
+    <!-- Portfolio grid col 2 -->
+    <div>
+
+      <h2 class="flex justify-center mb-11 mt-11 text-4xl capitalize">PortFolio</h2>
+      <div class="md:grid  md:grid-cols-2 md:gap-x-0  max-sm-[]:hidden  ">
+
+        <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 1.png" alt="camara">
+        </div>
+        <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 2.png"
+            alt="auriculares"></div>
+        <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 4.png"
+            alt="Maquinilla"></div>
+        <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 3.png"
+            alt="Lente-camara"></div>
+        <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 11.png" alt="altavoz">
+        </div>
+        <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 12.png" alt="polaroid">
+        </div>
+
+      </div>
+
+      <div class="glide md:hidden">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <!-- Contenido del primer slide -->
+              <img class="w-full h-full object-cover" src="../src/img/Rectangle 1.png" alt="">
+            </li>
+            <li class="glide__slide">
+              <img class="w-full h-full object-cover" src="../src/img/Rectangle 2.png" alt="">
+              <!-- Contenido del segundo slide -->
+            </li>
+            <li class="glide__slide">
+              <!-- Contenido del tercer slide -->
+              <img class="w-full h-full object-cover" src="../src/img/Rectangle 4.png" alt="">
+            </li>
+            <li class="glide__slide">
+              <!-- Contenido del tercer slide -->
+              <img class="w-full h-full object-cover" src="../src/img/Rectangle 3.png" alt="">
+            </li>
+            <li class="glide__slide">
+              <!-- Contenido del quarto slide -->
+              <img class="w-full h-full object-cover" src="../src/img/Rectangle 11.png" alt="">
+            </li>
+            <li class="glide__slide">
+              <!-- Contenido del tercer slide -->
+              <img class="w-full h-full object-cover" src="../src/img/Rectangle 12.png" alt="">
+            </li>
+            <!-- Agrega más slides según tus necesidades -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <div>
+      <h2 class="flex justify-center mb-11 mt-11 text-4xl capitalize">About</h2>
+    </div>
+    <div class="flex justify-center mb-7">
+      <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime et voluptate facere!
+        Amet aspernatur explicabo dicta accusantium, voluptatibus impedit non, quasi illo sunt corporis ea perspiciatis
+        quis, nemo facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores repellat temporibus
+        debitis fugit sed nobis natus repudiandae aliquid odit velit placeat nesciunt reiciendis facilis cupiditate
+        culpa, earum totam. Explicabo, natus.</p>
+    </div>
+    <!-- About grid 4 -->
+    <div class="grid grid-cols-4 mb-11">
+      <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 7.png" alt="camara">
+      </div>
+      <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 8.png" alt="camara">
+      </div>
+      <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 9.png" alt="camara">
+      </div>
+      <div class="w-97 h-97"><img class="w-full h-full object-cover" src="../src/img/Rectangle 10.png" alt="camara">
+      </div>
+    </div>
+    <!-- grid services -->
+    <div class="hidden sm:hidden md:block lg:block">
+      <h2 class="flex justify-center mb-11 mt-11 text-4xl capitalize">services</h2>
+      <div class="grid grid-cols-2 text-black">
+        <div class="bg-gray-100 p-4">
+          <h5 class="capitalize font-bold text-4xl">web <br> development</h5>
+          <p class="pt-4 pb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+            deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+            enim repudiandae cupiditate saepe, ratione magnam?</p>
+          <a class="pb-4" href="">Get a quote</a>
+        </div>
+        <div class="bg-gray-200 p-4">
+          <h5 class="capitalize font-bold text-4xl">product <br> design</h5>
+          <p class="pt-4 pb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+            deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+            enim repudiandae cupiditate saepe, ratione magnam?</p>
+          <a class="pb-4" href="">Get a quote</a>
+        </div>
+        <div class="bg-gray-300 p-4">
+          <h5 class="capitalize font-bold text-4xl">graphic <br> design</h5>
+          <p class="pt-4 pb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+            deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+            enim repudiandae cupiditate saepe, ratione magnam?</p>
+          <a class="pb-4" href="">Get a quote</a>
+        </div>
+        <div class="bg-gray-400 p-4">
+          <h5 class="capitalize font-bold text-4xl">mobile <br> app</h5>
+          <p class="pt-4 pb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+            deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+            enim repudiandae cupiditate saepe, ratione magnam?</p>
+          <a class="pb-4" href="">Get a quote</a>
+        </div>
+      </div>
+    </div>
+    
+      <br>
+      <div>
+         <div class="max-w-2xl mx-auto md:hidden lg:hidden text-black">
+
+      <div id="default-carousel" class="relative" data-carousel="static">
+         
+            <div class="overflow-hidden relative h-64 rounded-lg sm:h-64 ">
+               
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl "></span>
+                    <div class="bg-gray-100 p-4">
+                      <h5 class="capitalize font-bold text-4xl">web <br> development</h5>
+                      <p class="pt-4 pb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+                        deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+                        enim repudiandae cupiditate saepe, ratione magnam?</p>
+                      <a class="pb-4" href="">Get a quote</a>
+                    </div>
+                </div>
+               
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="bg-gray-200 p-4">
+                    <h5 class="capitalize font-bold text-4xl">product <br> Design</h5>
+                    <p class="pt-4 pb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+                      deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+                      enim repudiandae cupiditate saepe, ratione magnam?</p>
+                    <a class="pb-4" href="">Get a quote</a>
+                  </div>
+                </div>
+               
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="bg-gray-300 p-4">
+                    <h5 class="capitalize font-bold text-4xl">graphic <br> design</h5>
+                    <p class="pt-4 pb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+                      deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+                      enim repudiandae cupiditate saepe, ratione magnam?</p>
+                    <a class="pb-4" href="">Get a quote</a>
+                  </div>
+                </div>
+
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="bg-gray-400 p-4">
+                    <h5 class="capitalize font-bold text-4xl">mobile <br> app</h5>
+                    <p class="pt-4 pb-10 mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quas ullam debitis
+                      deserunt tempora consequuntur aperiam beatae excepturi dolores, doloremque, corporis nostrum laborum earum
+                      enim repudiandae cupiditate saepe, ratione magnam?</p>
+                    <a class="pb-4" href="">Get a quote</a>
+                  </div>
+              </div>
+            </div>
+            
+            
+            <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            </div>
+           
+            <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="hidden">Anterior</span>
+                </span>
+            </button>
+            <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="hidden">Siguiente</span>
+                </span>
+            </button>
+        </div>
+    
+      <p class="mt-5">
+      </p>
+        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    </div>
+      </div>
+      <br>
+      <div>
+        <h2 class="flex justify-center mb-11 mt-11 text-4xl capitalize">contact</h2>
+        <p class=" flex justify-center mb-11 mt-11 text-2xl">Contact@gmail.com</p>
+      </div>
+
+
+  </main>
+  <footer class="flex justify-between bg-white text-black p-4">
+   <div>
+    <p>2022 Company</p>
+   </div>
+   <div class="flex gap-7">
+    <p>Terms and Conditions </p>
+    <p>Privacity Policity</p>
+   </div>
+  </footer>
+
+  <script> 
+    function Menu(e) {
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+    }
+    // Initialization for ES Users
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 2
+    }).mount();
+
+  </script>
+
+</body>
+
 </html>
